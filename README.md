@@ -54,3 +54,14 @@ Framework ที่ใช้ตลอด Workshop เพื่อจัดกล
 2. **Prompt Template Collection** — Prompt Templates พร้อมใช้สำหรับทุก Testing Activity
 3. **My AI Testing Playbook** — Workflow ส่วนบุคคลของผู้เรียนแต่ละท่าน
 4. **Personal Action Plan** — 3 สิ่งที่จะนำกลับไปปรับใช้ในสัปดาห์แรก
+
+---
+
+## License
+
+Copyright © Siam Chamnankit Co., Ltd. & We Love Bug Co., Ltd.
+
+Workshop material นี้เผยแพร่ภายใต้ [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](LICENSE.md)
+
+- **อนุญาต:** นำไปแชร์และใช้เพื่อวัตถุประสงค์ที่ไม่ใช่เชิงพาณิชย์ โดยต้องระบุแหล่งที่มา
+- **ไม่อนุญาต:** ดัดแปลง ปรับเปลี่ยน หรือนำไปใช้เชิงพาณิชย์
