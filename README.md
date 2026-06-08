@@ -1,6 +1,6 @@
-# WLB26: AI-Augmented in Software Testing
+# We Love Bug | AI-Augmented in Software Testing
 
-ยินดีต้อนรับสู่ Workshop **AI in Software Testing: From Test Design to Test Report**
+ยินดีต้อนรับสู่ Workshop **AI-Augmented in Software Testing**
 
 Repository นี้รวบรวม Workshop Material และ Prompt Templates สำหรับผู้เข้าร่วม Workshop ทุกท่าน
 
