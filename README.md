@@ -57,6 +57,80 @@ Framework ที่ใช้ตลอด Workshop เพื่อจัดกล
 
 ---
 
+## AI Applications ที่ใช้ในการฝึก
+
+ผู้เรียนจะได้เห็นว่า LLM ต่างบริษัท ให้ผลลัพธ์ต่างกัน สำหรับ Prompt เดียวกัน ซึ่งเป็นบทเรียนสำคัญ: ไม่ต้องยึดติด AI ตัวใดตัวหนึ่ง แต่เลือกใช้ให้เหมาะกับงาน
+
+| AI Application | LLM Model |
+|----------------|-----------|
+| Microsoft Copilot | GPT-4o (OpenAI) |
+| Github Copilot | Multi-model support |
+| Claude / Claude Code | Claude Sonnet / Opus (Anthropic) |
+| Google Gemini | Gemini Pro / Ultra (Google DeepMind) |
+
+---
+
+## AI Technology Mapping — กับ Software Testing Activities
+
+> อ้างอิง: ISTQB Foundation Level v4.0 (2023) · WLB AI Technology Classification  
+> Human must remain in the loop for all AI-assisted activities.
+
+### ประเภทของ AI Technology
+
+| Type | Category | Description |
+|------|----------|-------------|
+| **Generative** | Parent | LLM-based generation of content and test artifacts |
+| **Code Gen** | └ Generative | Generates executable code (test scripts, automation) |
+| **NLG** | └ Generative | Generates structured reports and natural language narratives |
+| **Predictive** | Parent | Supervised ML — forecast outcomes from historical patterns |
+| **Diagnostic ML** | Parent | Supervised ML — classify, detect, and explain failure patterns |
+| **Anomaly Detection** | └ Diagnostic ML | Unsupervised ML — detect outliers without labeled failure categories |
+| **Prescriptive** | Parent | Optimization AI — recommends actions to achieve a target outcome |
+| **Recommender** | Parent | Ranking and filtering AI — surfaces the most relevant items |
+| **Agentic** | Parent | Autonomous multi-step execution with goal-directed behavior |
+
+### 1. Test Planning & Test Monitoring / Control
+
+| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | Example Tools / Products |
+|--------------------------|---------------|----------------------|--------------------------|
+| Define test objectives & scope | Generative | Extract testable objectives from requirements, user stories, and acceptance criteria | Claude, GPT-4o, Microsoft Copilot |
+| Identify & analyze risks (product & project) | Predictive | Predict defect-prone modules using code complexity metrics and historical defect data | SonarQube ML, IBM Rational, custom ML |
+| Estimate test effort & schedule | Predictive | ML-based effort estimation from historical sprint, project, and team velocity data | LinearB, Jira Predictive, custom ML |
+| Define test approach & entry/exit criteria | Generative | Generate test strategy and definition-of-done criteria from project context | Claude, GPT-4o, Google Gemini |
+| Monitor test progress (metrics & trends) | Diagnostic ML | Detect trends and early warning signals in test execution metrics across sprint cycles | Grafana ML, TestRail Analytics, Zephyr |
+| Test status reporting | NLG | Auto-generate test progress reports, executive summaries, and quality dashboards | Claude, GPT-4o, Google Gemini |
+| Corrective action planning | Prescriptive | Recommend resource reallocation and risk response actions from real-time test trend data | Custom Prescriptive AI, Datadog Insights |
+
+### 2. Test Development ⚠️
+
+> ⚠️ *Test Development* is WLB's grouping of ISTQB FL v4.0 activities: **Test Analysis + Test Design + Test Implementation**
+
+| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | Example Tools / Products |
+|--------------------------|---------------|----------------------|--------------------------|
+| Analyze test basis (requirements & specs) | Generative | Extract and structure test conditions from user stories, AC, and specifications | Claude, GPT-4o, GitHub Copilot |
+| Identify testability issues in requirements | Diagnostic ML | Detect ambiguous, incomplete, or conflicting requirements using NLP classification | IBM Watson, custom NLP / spaCy |
+| Design test cases (EP, BVA, DT, ST) | Generative | Generate test cases aligned to ISTQB test design techniques from test conditions | Claude, GPT-4o, Testim AI |
+| Design BDD / Gherkin scenarios | NLG | Convert acceptance criteria to structured Given-When-Then feature files for ATDD/BDD | Claude, GitHub Copilot, Cursor |
+| Test case prioritization | Recommender | Recommend execution order by risk level, code change impact, and historical failure rate | Launchable, Sealights, custom ML |
+| Test data design & generation | Generative | Synthesize realistic, diverse, PII-compliant test datasets from schema or real examples | Mostly AI, Gretel, Faker, Claude |
+| Implement automated test scripts | Code Gen | Generate Playwright / Robot Framework scripts directly from test cases or manual steps | GitHub Copilot, Cursor, Claude Code |
+| Test script maintenance (locator repair) | Agentic | Autonomously detect and repair broken element selectors without manual intervention | Healenium, Testim, Mabl |
+
+### 3. Test Execution
+
+| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | Example Tools / Products |
+|--------------------------|---------------|----------------------|--------------------------|
+| Test suite selection (CI/CD pipeline) | Recommender | Recommend minimal effective test subset for changed code to optimize pipeline speed | Launchable, Diffblue, Sealights |
+| Visual & functional result comparison | Diagnostic ML | Visual regression — detect UI layout and pixel-level differences across builds | Applitools, Percy, Chromatic |
+| Log & result anomaly detection | Anomaly Detection | Detect unusual behavior patterns in system logs and test execution output | Elastic ML, Splunk MLTK, Dynatrace |
+| Defect triage & classification | Diagnostic ML | Auto-classify defect type, severity, and affected component from failure evidence | Custom ML + Jira, Zephyr AI |
+| Root cause analysis | Diagnostic ML | Cluster failure patterns to identify systemic defect root causes across test runs | ELK Stack + ML, Dynatrace AI |
+| Defect report generation | NLG | Auto-generate structured defect descriptions from failure screenshots and log evidence | Claude, GPT-4o, Google Gemini |
+| Performance anomaly detection | Anomaly Detection | Detect performance regressions and SLA threshold violations across test runs | Dynatrace, Datadog ML, k6 + AI |
+| Self-healing test execution | Agentic | Autonomously recover from broken steps and adapt to UI changes at runtime | Testim, Mabl, Healenium |
+
+---
+
 ## License
 
 Copyright © Siam Chamnankit Co., Ltd., Shu Ha Ri Co., Ltd. & We Love Bug Co., Ltd.
