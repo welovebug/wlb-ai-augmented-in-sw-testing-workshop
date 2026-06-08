@@ -1,4 +1,4 @@
-# We Love Bug | AI-Augmented in Software Testing
+# We Love Bug 2026 | AI-Augmented in Software Testing
 
 ยินดีต้อนรับสู่ Workshop **AI-Augmented in Software Testing**
 
