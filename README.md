@@ -59,7 +59,7 @@ Framework ที่ใช้ตลอด Workshop เพื่อจัดกล
 
 ## License
 
-Copyright © Siam Chamnankit Co., Ltd. & We Love Bug Co., Ltd.
+Copyright © Siam Chamnankit Co., Ltd., Shu Ha Ri Co., Ltd. & We Love Bug Co., Ltd.
 
 Workshop material นี้เผยแพร่ภายใต้ [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](LICENSE.md)
 
