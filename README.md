@@ -5,36 +5,62 @@
 Repository นี้รวบรวม Workshop Material และ Prompt Templates สำหรับผู้เข้าร่วม Workshop ทุกท่าน
 
 ---
-
 ## สิ่งที่อยู่ใน Repository นี้
 
-```
-workshop/
-├── day-1/          (00) AI Landscape
-│                   (01) Prompt Engineering
-│                   (02) Test Analysis & Planning
-│                   (03) Test Cases Design — BVA/EP
-│                   (04) Decision Table
-│                   (05) State Transition
-│
-└── day-2/          (00) Day-1 Review
-                    (01) E2E Test Scenarios
-                    (02) Test Data Generation
-                    (03) Test Development
-                    (04) Defect Report
-                    (05) Defect Analysis
-                    (06) Test Report
-                    (07) My AI Testing Playbook
+Workshop จัดโครงสร้างตามสามระดับของความสามารถ AI (Capability Levels) — ผู้เรียนจะเพิ่มพูนความสามารถขั้นต่อขั้น:
 
+### 🎯 **Level 1: Prompts** — Conversational, One-Off Use
+
+ผู้เรียนเรียนรู้วิธีใช้ AI ผ่านการสนทนา เพื่อวิเคราะห์ และร่างผลลัพธ์ได้ทันที
+
+```
+workshop/day-1/
+├── 00-ai-landscape/           ← เข้าใจภูมิทัศน์ AI ปัจจุบัน
+├── 01-prompt-engineering/     ← เรียนรู้วิธีเขียน Prompt ที่มีประสิทธิภาพ
+├── 02-test-analysis-planning/ ← ใช้ Prompts วิเคราะห์ requirement
+└── 03-test-cases-bva-ep/      ← ใช้ Prompts ร่างชุดทดสอบ
+```
+
+### 🔄 **Level 2: SKILL** — Structured, Reusable Systems
+
+ผู้เรียนสร้างระบบคำสั่งที่มีโครงสร้าง (Instruction Systems) เพื่อใช้ซ้ำในงานมาตรฐาน
+
+```
+workshop/day-1/
+├── 04-decision-table/         ← SKILL template สำหรับการออกแบบตามเทคนิค
+└── 05-state-transition/       ← SKILL สำหรับการวิเคราะห์สถานะ
+
+workshop/day-2/
+├── 01-e2e-scenarios/          ← สร้าง Scenario ด้วย SKILL template
+├── 02-test-data-generation/   ← เจนเนเรตข้อมูลทดสอบแบบเป็นระบบ
+└── 03-test-development/       ← เขียน Test Script พร้อมใช้ซ้ำได้
+```
+
+### 🤖 **Level 3: Agents** — Autonomous Multi-Step Execution
+
+ผู้เรียนสร้าง Agent เพื่อทำหลายขั้นตอนอัตโนมัติ พร้อมการตัดสินใจของ AI
+
+```
+workshop/day-2/
+├── 04-defect-report/          ← Agent สำหรับแยกประเภท defect อัตโนมัติ
+├── 05-defect-analysis/        ← Agent หา root cause ด้วยหลายขั้นตอน
+├── 06-test-report/            ← Agent สร้างรายงาน executive summary
+└── 07-my-ai-testing-playbook/ ← สังเคราะห์ Workflow ส่วนตัวจากการเรียน
+```
+
+---
+
+### 📦 Templates & Reference
+
+```
 templates/
 ├── prompts/        Prompt Templates สำหรับแต่ละ Testing Activity
 └── documents/      Output Templates (Test Scenario, Defect Report, Test Report)
 
-Wiki/               Reference Material
-├── AI Applications Reference          — Tool pricing & capabilities by vendor
-├── AI Technology Types                — AI technology classification
-└── AI Technology Mapping              — ISTQB v4.0 activities → AI technologies
-                                         (See: https://github.com/welovebug/wlb-ai-augmented-in-sw-testing-workshop/wiki)
+Wiki/               Reference Material → https://github.com/welovebug/wlb-ai-augmented-in-sw-testing-workshop/wiki
+├── AI Applications Reference   — Tool pricing & capabilities by vendor
+├── AI Technology Types         — AI technology classification
+└── AI Technology Mapping       — ISTQB v4.0 activities → AI technologies
 ```
 
 ---
