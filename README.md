@@ -61,12 +61,63 @@ Framework ที่ใช้ตลอด Workshop เพื่อจัดกล
 
 ผู้เรียนจะได้เห็นว่า LLM ต่างบริษัท ให้ผลลัพธ์ต่างกัน สำหรับ Prompt เดียวกัน ซึ่งเป็นบทเรียนสำคัญ: ไม่ต้องยึดติด AI ตัวใดตัวหนึ่ง แต่เลือกใช้ให้เหมาะกับงาน
 
-| AI Application | LLM Model |
-|----------------|-----------|
-| Microsoft Copilot | GPT-4o (OpenAI) |
-| Github Copilot | Multi-model support |
-| Claude / Claude Code | Claude Sonnet / Opus (Anthropic) |
-| Google Gemini | Gemini Pro / Ultra (Google DeepMind) |
+> **Capability columns**
+> - **Prompt** — conversational prompting ทั่วไป (one-off)
+> - **SKILL** — รองรับ structured / reusable instruction system: Claude Projects + SKILL.md · GitHub Copilot Instructions · Gemini Gems · Kiro Steering Files · Ollama Modelfile
+> - **Agent** — autonomous multi-step execution: file operations, code execution, web actions, tool calling
+
+---
+
+### Anthropic
+
+| AI Application | Foundation Model | Package | Prompt | SKILL | Agent |
+|----------------|-----------------|---------|:------:|:-----:|:-----:|
+| **Claude** (web / desktop / mobile) | Sonnet 4.x / Opus 4.x | Free · Pro $20/mo · Max $100–200/mo · Team $25/seat/mo | ✓ | ✓ | ✓ |
+| **Claude Code** (CLI — agentic coding) | Sonnet 4.x / Opus 4.x | Pro ($20/mo) ขึ้นไป · API pay-per-token | ✓ | ✓ | ✓ |
+| **Cowork** (desktop automation — beta) | Claude Sonnet 4.x | รวมใน Pro ขึ้นไป (beta) | ✓ | ✓ | ✓ |
+
+### Microsoft
+
+| AI Application | Foundation Model | Package | Prompt | SKILL | Agent |
+|----------------|-----------------|---------|:------:|:-----:|:-----:|
+| **Microsoft Copilot** (web / M365) | GPT-4o (OpenAI) | Free · Pro $20/mo · Microsoft 365 Copilot ~$30/seat/mo | ✓ | ✓ | ✓ |
+| **GitHub Copilot** (IDE) | Multi-model: GPT-4o, Claude, Gemini | Free (2,000 completions/mo) · Pro $10/mo · Business $19/seat/mo · Enterprise $39/seat/mo | ✓ | ✓ | ✓ |
+
+### Google
+
+| AI Application | Foundation Model | Package | Prompt | SKILL | Agent |
+|----------------|-----------------|---------|:------:|:-----:|:-----:|
+| **Google Gemini** (web / mobile) | Gemini 2.5 Pro / 2.0 Flash | Free · Advanced $19.99/mo (Google One AI Premium) | ✓ | ✓ | ✓ |
+| **Gemini Code Assist** (IDE) | Gemini 2.5 Pro | Free (individual) · Standard $22.80/seat/mo · Enterprise $54/seat/mo | ✓ | ✓ | ✓ |
+| **Gemini API / AI Studio** | Gemini 2.5 Pro / Flash | Free tier · API pay-per-token | ✓ | ✓ | ✓ |
+
+### Alibaba Cloud
+
+| AI Application | Foundation Model | Package | Prompt | SKILL | Agent |
+|----------------|-----------------|---------|:------:|:-----:|:-----:|
+| **Qwen Chat** (web / mobile) — qwen.ai | Qwen3.7 Max / Qwen3.6-Plus | Free · Paid plans available | ✓ | — | ✓ |
+| **Model Studio** (API) — alibabacloud.com | Qwen3.7 Max / Qwen3.6-Plus | API pay-per-token · Open-weight (Hugging Face) | ✓ | ✓ | ✓ |
+
+### Moonshot AI
+
+| AI Application | Foundation Model | Package | Prompt | SKILL | Agent |
+|----------------|-----------------|---------|:------:|:-----:|:-----:|
+| **Kimi Chat** (web / mobile) — kimi.ai | Kimi K2.6 — 1T MoE, 262K context | Free · Kimi Plus (paid) ¹ | ✓ | — | ✓ |
+| **Kimi API** — platform.moonshot.ai | Kimi K2.6 | API pay-per-token · Open-weight (Hugging Face) ¹ | ✓ | ✓ | ✓ |
+
+### AWS
+
+| AI Application | Foundation Model | Package | Prompt | SKILL | Agent |
+|----------------|-----------------|---------|:------:|:-----:|:-----:|
+| **Kiro** (IDE) — kiro.dev | Claude Sonnet 4.x / Opus 4.x (via AWS Bedrock) | Free 50 credits/mo · Pro $20/mo · Pro+ $40/mo · Power $200/mo | ✓ | ✓ | ✓ |
+
+### Open Source / Self-Hosted
+
+| AI Application | Foundation Model | Package | Prompt | SKILL | Agent |
+|----------------|-----------------|---------|:------:|:-----:|:-----:|
+| **Ollama** (local runtime) — ollama.com | Open-weight: Llama 3, Qwen3, Kimi K2, Mistral, Gemma, DeepSeek | Free (self-hosted — ไม่มีค่ารายเดือน) | ✓ | ✓ | ✓ |
+
+> ¹ **Kimi enterprise note:** API requests are processed on servers in China. For sensitive or confidential data, self-hosted deployment is recommended — model weights available on Hugging Face under Modified MIT License (free commercial use below 100M MAU).
 
 ---
 
@@ -91,43 +142,43 @@ Framework ที่ใช้ตลอด Workshop เพื่อจัดกล
 
 ### 1. Test Planning & Test Monitoring / Control
 
-| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | Example Tools / Products |
-|--------------------------|---------------|----------------------|--------------------------|
-| Define test objectives & scope | Generative | Extract testable objectives from requirements, user stories, and acceptance criteria | Claude, GPT-4o, Microsoft Copilot |
-| Identify & analyze risks (product & project) | Predictive | Predict defect-prone modules using code complexity metrics and historical defect data | SonarQube ML, IBM Rational, custom ML |
-| Estimate test effort & schedule | Predictive | ML-based effort estimation from historical sprint, project, and team velocity data | LinearB, Jira Predictive, custom ML |
-| Define test approach & entry/exit criteria | Generative | Generate test strategy and definition-of-done criteria from project context | Claude, GPT-4o, Google Gemini |
-| Monitor test progress (metrics & trends) | Diagnostic ML | Detect trends and early warning signals in test execution metrics across sprint cycles | Grafana ML, TestRail Analytics, Zephyr |
-| Test status reporting | NLG | Auto-generate test progress reports, executive summaries, and quality dashboards | Claude, GPT-4o, Google Gemini |
-| Corrective action planning | Prescriptive | Recommend resource reallocation and risk response actions from real-time test trend data | Custom Prescriptive AI, Datadog Insights |
+| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | AI Applications (ที่ใช้ในการฝึก) |
+|--------------------------|---------------|----------------------|----------------------------------|
+| Define test objectives & scope | Generative | Extract testable objectives from requirements, user stories, and acceptance criteria | Claude, Microsoft Copilot, Google Gemini, Qwen Chat |
+| Identify & analyze risks (product & project) | Predictive | Analyze requirements and test basis to surface risk indicators and high-risk areas | Claude, Kimi Chat, Google Gemini |
+| Estimate test effort & schedule | Predictive | Assist effort estimation by analyzing scope, complexity, and comparable project context | Claude, Microsoft Copilot, Google Gemini |
+| Define test approach & entry/exit criteria | Generative | Generate test strategy and definition-of-done criteria from project context | Claude, Microsoft Copilot, Google Gemini, Qwen Chat |
+| Monitor test progress (metrics & trends) | Diagnostic ML | Analyze test execution summaries and metrics to identify trends and flag concerns | Claude, Kimi Chat, Google Gemini |
+| Test status reporting | NLG | Auto-generate test progress reports, executive summaries, and quality dashboards | Claude, Microsoft Copilot, Google Gemini, Qwen Chat |
+| Corrective action planning | Prescriptive | Recommend resource and priority adjustments based on test trend analysis | Claude, Microsoft Copilot, Google Gemini |
 
 ### 2. Test Development ⚠️
 
 > ⚠️ *Test Development* is WLB's grouping of ISTQB FL v4.0 activities: **Test Analysis + Test Design + Test Implementation**
 
-| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | Example Tools / Products |
-|--------------------------|---------------|----------------------|--------------------------|
-| Analyze test basis (requirements & specs) | Generative | Extract and structure test conditions from user stories, AC, and specifications | Claude, GPT-4o, GitHub Copilot |
-| Identify testability issues in requirements | Diagnostic ML | Detect ambiguous, incomplete, or conflicting requirements using NLP classification | IBM Watson, custom NLP / spaCy |
-| Design test cases (EP, BVA, DT, ST) | Generative | Generate test cases aligned to ISTQB test design techniques from test conditions | Claude, GPT-4o, Testim AI |
-| Design BDD / Gherkin scenarios | NLG | Convert acceptance criteria to structured Given-When-Then feature files for ATDD/BDD | Claude, GitHub Copilot, Cursor |
-| Test case prioritization | Recommender | Recommend execution order by risk level, code change impact, and historical failure rate | Launchable, Sealights, custom ML |
-| Test data design & generation | Generative | Synthesize realistic, diverse, PII-compliant test datasets from schema or real examples | Mostly AI, Gretel, Faker, Claude |
-| Implement automated test scripts | Code Gen | Generate Playwright / Robot Framework scripts directly from test cases or manual steps | GitHub Copilot, Cursor, Claude Code |
-| Test script maintenance (locator repair) | Agentic | Autonomously detect and repair broken element selectors without manual intervention | Healenium, Testim, Mabl |
+| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | AI Applications (ที่ใช้ในการฝึก) |
+|--------------------------|---------------|----------------------|----------------------------------|
+| Analyze test basis (requirements & specs) | Generative | Extract and structure test conditions from user stories, AC, and specifications | Claude, Microsoft Copilot, Qwen Chat, Kimi Chat |
+| Identify testability issues in requirements | Diagnostic ML | Review requirements for ambiguity, missing acceptance criteria, and inconsistencies | Claude, Qwen Chat, Kimi Chat |
+| Design test cases (EP, BVA, DT, ST) | Generative | Generate test cases aligned to ISTQB test design techniques from test conditions | Claude, Microsoft Copilot, Google Gemini, Qwen Chat, Kimi Chat |
+| Design BDD / Gherkin scenarios | NLG | Convert acceptance criteria to structured Given-When-Then feature files for ATDD/BDD | Claude, GitHub Copilot, Kiro |
+| Test case prioritization | Recommender | Prioritize test cases by risk, change impact, and coverage via AI-assisted analysis | Claude, Microsoft Copilot, Google Gemini |
+| Test data design & generation | Generative | Synthesize realistic, diverse, PII-safe test datasets via prompt-based generation | Claude, Qwen Chat, Ollama (sensitive data) |
+| Implement automated test scripts | Code Gen | Generate Playwright / Robot Framework scripts from test cases or natural language steps | GitHub Copilot, Claude Code, Kiro |
+| Test script maintenance (locator repair) | Agentic | Detect and suggest repairs for broken selectors and stale test steps | Kiro, Claude Code, GitHub Copilot |
 
 ### 3. Test Execution
 
-| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | Example Tools / Products |
-|--------------------------|---------------|----------------------|--------------------------|
-| Test suite selection (CI/CD pipeline) | Recommender | Recommend minimal effective test subset for changed code to optimize pipeline speed | Launchable, Diffblue, Sealights |
-| Visual & functional result comparison | Diagnostic ML | Visual regression — detect UI layout and pixel-level differences across builds | Applitools, Percy, Chromatic |
-| Log & result anomaly detection | Anomaly Detection | Detect unusual behavior patterns in system logs and test execution output | Elastic ML, Splunk MLTK, Dynatrace |
-| Defect triage & classification | Diagnostic ML | Auto-classify defect type, severity, and affected component from failure evidence | Custom ML + Jira, Zephyr AI |
-| Root cause analysis | Diagnostic ML | Cluster failure patterns to identify systemic defect root causes across test runs | ELK Stack + ML, Dynatrace AI |
-| Defect report generation | NLG | Auto-generate structured defect descriptions from failure screenshots and log evidence | Claude, GPT-4o, Google Gemini |
-| Performance anomaly detection | Anomaly Detection | Detect performance regressions and SLA threshold violations across test runs | Dynatrace, Datadog ML, k6 + AI |
-| Self-healing test execution | Agentic | Autonomously recover from broken steps and adapt to UI changes at runtime | Testim, Mabl, Healenium |
+| ISTQB Activity (FL v4.0) | AI Technology | Application in Testing | AI Applications (ที่ใช้ในการฝึก) |
+|--------------------------|---------------|----------------------|----------------------------------|
+| Test suite selection (CI/CD pipeline) | Recommender | Recommend test subset for changed code via AI-assisted impact analysis | Claude, GitHub Copilot, Kiro |
+| Visual & functional result comparison | Diagnostic ML | Review test result screenshots and UI differences using multimodal AI analysis | Google Gemini, Claude (multimodal), Kimi Chat |
+| Log & result anomaly detection | Anomaly Detection | Analyze large-scale logs and test output for error patterns using long-context AI | Kimi Chat (262K context), Claude, Google Gemini |
+| Defect triage & classification | Diagnostic ML | Classify defect type, severity, and affected component via AI-assisted analysis | Claude, Microsoft Copilot, Qwen Chat, Kimi Chat |
+| Root cause analysis | Diagnostic ML | Analyze failure patterns and logs to identify root causes via conversational AI | Claude, Kimi Chat (long context), Google Gemini |
+| Defect report generation | NLG | Generate structured defect descriptions from failure observations and log evidence | Claude, Microsoft Copilot, Google Gemini, Qwen Chat |
+| Performance anomaly detection | Anomaly Detection | Analyze JMeter / k6 test output to identify threshold violations and response time anomalies | Claude, Google Gemini, Kimi Chat |
+| Self-healing test execution | Agentic | Generate fixes for broken test steps and update automation scripts | Kiro, Claude Code, GitHub Copilot |
 
 ---
 
