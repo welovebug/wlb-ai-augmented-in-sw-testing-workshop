@@ -39,6 +39,18 @@ Wiki/               Reference Material
 
 ---
 
+## AI Capability Levels
+
+ผู้เรียนจะได้เรียนรู้ AI ในสามระดับตามโครงสร้าง **[agentskills.io](https://agentskills.io/home)**:
+
+| Level | ชื่อ | ลักษณะ | Autonomy | Use Case in Testing |
+|-------|------|--------|----------|----------------------|
+| **Level 1** | **Prompts** | Conversational, one-off interactions | HITL (Human-in-the-Loop) | Ad-hoc test planning, quick analysis |
+| **Level 2** | **SKILL** | Structured, reusable instruction systems | HOTL (Human-on-the-Loop) | Repeatable test case generation, standardized analysis |
+| **Level 3** | **Agents** | Autonomous multi-step execution | HAbL/HBtL (Human-above/behind-Loop) | End-to-end test workflows, automated decision-making |
+
+---
+
 ## Autonomy Spectrum
 
 Framework ที่ใช้ตลอด Workshop เพื่อจัดกลุ่ม Workflow ตามระดับการมีส่วนร่วมของ Human:
