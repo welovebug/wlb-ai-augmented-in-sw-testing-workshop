@@ -5,6 +5,7 @@
 Repository นี้รวบรวม Workshop Material และ Prompt Templates สำหรับผู้เข้าร่วม Workshop ทุกท่าน
 
 ---
+
 ## สิ่งที่อยู่ใน Repository นี้
 
 Workshop จัดโครงสร้างตามสามระดับของความสามารถ AI (Capability Levels) — ผู้เรียนจะเพิ่มพูนความสามารถขั้นต่อขั้น:
