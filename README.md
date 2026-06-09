@@ -1,6 +1,6 @@
 # We Love Bug 2026 | AI-Augmented in Software Testing
 
-ยินดีต้อนรับสู่ Workshop **AI-Augmented in Software Testing**
+ยินดีต้อนรับสู่ชุดการฝึก **AI-Augmented in Software Testing**
 
 Repository นี้รวบรวม Workshop Material และ Prompt Templates สำหรับผู้เข้าร่วม Workshop ทุกท่าน
 
@@ -10,15 +10,31 @@ Repository นี้รวบรวม Workshop Material และ Prompt Templa
 
 ```
 workshop/
-├── day-1/          AI Landscape, Prompt Engineering, Test Analysis & Planning,
-│                   Test Cases Design (BVA, EP, Decision Table, State Transition)
-└── day-2/          E2E Test Scenarios, Test Data, Test Development,
-                    Defect Report, Defect Analysis, Test Report,
-                    My AI Testing Playbook
+├── day-1/          (00) AI Landscape
+│                   (01) Prompt Engineering
+│                   (02) Test Analysis & Planning
+│                   (03) Test Cases Design — BVA/EP
+│                   (04) Decision Table
+│                   (05) State Transition
+│
+└── day-2/          (00) Day-1 Review
+                    (01) E2E Test Scenarios
+                    (02) Test Data Generation
+                    (03) Test Development
+                    (04) Defect Report
+                    (05) Defect Analysis
+                    (06) Test Report
+                    (07) My AI Testing Playbook
 
 templates/
 ├── prompts/        Prompt Templates สำหรับแต่ละ Testing Activity
-└── documents/      Document Templates (Test Scenario, Defect Report, Test Report)
+└── documents/      Output Templates (Test Scenario, Defect Report, Test Report)
+
+Wiki/               Reference Material
+├── AI Applications Reference          — Tool pricing & capabilities by vendor
+├── AI Technology Types                — AI technology classification
+└── AI Technology Mapping              — ISTQB v4.0 activities → AI technologies
+                                         (See: https://github.com/welovebug/wlb-ai-augmented-in-sw-testing-workshop/wiki)
 ```
 
 ---
