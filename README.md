@@ -61,9 +61,11 @@ Framework ที่ใช้ตลอด Workshop เพื่อจัดกล
 
 Learn how different AI vendors approach testing workflows, and map ISTQB activities to the right AI technologies and tools.
 
-- **[AI Applications Reference](wiki/AI-Applications-Reference.md)** — Detailed pricing, models, and capabilities (Anthropic, Microsoft, Google, Alibaba, Moonshot, AWS, Open Source)
-- **[AI Technology Types](wiki/AI-Technology-Types.md)** — Classification of AI technologies (Generative, Predictive, Diagnostic, Agentic, etc.)
-- **[AI Technology Mapping](wiki/AI-Technology-Mapping.md)** — ISTQB v4.0 activities mapped to AI technology types and workshop tools
+See the **[Wiki](https://github.com/welovebug/wlb-ai-augmented-in-sw-testing-workshop/wiki)** for detailed reference material:
+
+- **[AI Applications Reference](https://github.com/welovebug/wlb-ai-augmented-in-sw-testing-workshop/wiki/AI-Applications-Reference)** — Detailed pricing, models, and capabilities (Anthropic, Microsoft, Google, Alibaba, Moonshot, AWS, Open Source)
+- **[AI Technology Types](https://github.com/welovebug/wlb-ai-augmented-in-sw-testing-workshop/wiki/AI-Technology-Types)** — Classification of AI technologies (Generative, Predictive, Diagnostic, Agentic, etc.)
+- **[AI Technology Mapping](https://github.com/welovebug/wlb-ai-augmented-in-sw-testing-workshop/wiki/AI-Technology-Mapping)** — ISTQB v4.0 activities mapped to AI technology types and workshop tools
 
 **Key takeaway:** Different vendors have different strengths. Tool comparison is a core principle — choose the best tool for each testing task, not just one tool for everything.
 
